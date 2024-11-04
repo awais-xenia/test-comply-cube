@@ -16,7 +16,7 @@ function App() {
     setLoading(true);
   
     try {
-      const result = await fetch(`https://itunes.apple.com/search?term=${query}`);
+      const result = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}`);
 
       console.log('result', JSON.stringify(result));
 
